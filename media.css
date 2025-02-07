@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lucida Bright";
+    background: url(temp2.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding-left: 250px; /* Space for the side navigation bar */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  
+  /* Side Navigation Bar */
+  header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height for the sidebar */
+    width: 110px; /* Fixed width for the sidebar */
+    background: rgba(255,255,255,0.2); /* Dark background */
+    backdrop-filter: blur(5px); /*blur the bg of side nav */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: width 0.5s;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+ }
+ .logo-container div{
+    display:none;
+ }
+ .logo-container h2{
+    font-size: 40px;
+    font-weight: 600;
+    white-space: nowrap;
+ }
+
+ .logo{
+    width: 40px;
+    border-radius: 50%;
+    margin: auto;
+ }
+  
+  
+  .menu {
+    list-style: none;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between menu items */
+  }
+
+  
+  .menu li {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .icon{
+    width: 30px;
+    margin-right: 0px;
+   
+  }
+  
+  .menu li a {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: none;
+    font-size: 20px;
+  }
+  
+  .menu li a:hover {
+    color: aquamarine;
+    background-color: #444; /* Optional: Add background on hover */
+  }
+
+  header:hover{
+    width: 250px;
+  }
+  header:hover .logo-container div{
+    display: block;
+  }
+  header:hover .logo-container div{
+    margin-right: 20px;
+  }
+  header:hover .logo-container{
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+  }
+  header:hover .menu li a{
+    display: block;
+  }
+  header:hover .menu li a{
+    margin-left: 20px;
+  }
+  header:hover .menu li img{
+    margin-right: 10px;
+    transform: scale(1.05);
+ }
+ header:hover .menu li{
+  justify-content: flex-start;
+ }
+  
+  /* Search Button */
+  .btn {
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background: green;
+    backdrop-filter: blur(5px); /*blur the bg of side nav */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+
+  }
+
+ .head h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  font-size: 50px;
+  color: #444;
+ }
+ /* Image grid container */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 30px; /* Space between images */
+    justify-content: center; /* Center the grid */
+    margin-top: 20px;
+    padding: 60px;
+    margin-right: 20px;
+}
+
+/* Image styles */
+.image-grid img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    transition: transform 0.3s ease; /* Optional: Add hover effect */
+}
+
+/* Hover effect */
+.image-grid img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    
+}
+nav ul li:hover{
+    transform: scale(1.05); /* Slight zoom on hover */
+    color: black;
+}
+
+.back {
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background: rgba(255,255,255,0.2); /* Dark background */
+  backdrop-filter: blur(5px); /*blur the bg of side nav */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+
+  }
+ .back:hover{
+    color: blue;
+    transform: scale(1.05);
+  
+  }
+
+  html {
+    overflow-y: scroll;
+  }
+  /* Style the scrollbar */
+
+
+body::-webkit-scrollbar {
+width: 24px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: pink; /* Match the scrollbar thumb with the background */
+  border-radius: 6px; /* Round edges */
+  border: 3px solid pink; /* Add padding */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: pink; /* Same as the background color */
+}
+
+.scroll-icon {
+  position: fixed;
+  right: 10px; /* Align near the scrollbar */
+  top: 0;
+  transform: translateY(0);
+  width: 30px;
+  height: 30px;
+  background-color: pink;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: pink;
+  font-weight: bold;
+  z-index: 1000;
+  transition: transform 0.5s linear; /* Smooth movement */
+}

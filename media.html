@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Design & Development Course</title>
+    <link rel="stylesheet" href="media.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="scroll-icon" id="scrollIcon">⬤</div>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="wordpress-logo-36.png" alt="WOODY Logo" class="logo" />
+          <!-- Add your logo path -->
+          <div><h2>Woody</h2></div>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><div class="icon"><img src="home-solid-36.png" alt="none"/></div>
+            <a href="index.html">Home</a></li>
+            <li><div class="icon"><img src="male-female-regular-36.png" alt="none"/></div>
+            <a href="employee.html">Employee</a></li>
+            <li><div class="icon"><img src="cart-download-regular-36.png" alt="none"/></div>
+            <a href="./orders.html">Orders</a></li>
+            <li><div class="icon"><img src="product-hunt-logo-36.png" alt="none"/></div>
+            <a href="./product.html">Products</a></li>
+            <li><div class="icon"><img src="image-alt-solid-36.png" alt="none"/></div>
+            <a href="#">Media</a></li>
+            <li><div class="icon"><img src="cog-solid-36.png" alt="none"/></div>
+            <a href="setting.html">Settings</a></li>
+          </ul>
+        </nav>
+        <form action="login.html"><button type="submit" class="btn"><img src="bx-revision.svg" alt="none"/> Logout</button></form>
+      </header>
+    </div>
+    <main>
+      <div class="head"><h1>Top selling Toys</h1></div>
+    <div class="image-grid">
+        <img src="./assets/animal.jpeg" alt="Image 1">
+        <img src="./assets/doll.jpeg" alt="Image 2">
+        <img src="./assets/toyss.jpg" alt="Image 3">
+        <img src="./assets/car.jpeg" alt="Image 4">
+        <img src="./assets/train.jpeg" alt="Image 5">
+        <img src="./assets/horse.png" alt="Image 6">
+        <img src="./assets/elephant.png" alt="Image 7">
+        <img src="./assets/kitchent.jpeg" alt="Image 8">
+    </div>
+    <form action="product.html"><button type="submit" class="back"><img src="left-arrow-circle-regular-24.png" alt="none"/>Back</button></form> 
+    <form action="setting.html"><button type="submit" class="back"><img src="right-arrow-circle-regular-24.png" alt="none"/>next</button></form>
+    <form action="media.html"><button type="submit" class="back"><img src="bx-reset.svg" alt="none"/></button></form>
+    </main>
+     <!-- JavaScript to handle scrolling -->
+   <script>
+    const scrollIcon = document.getElementById('scrollIcon');
+
+    // Function to update the icon position
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY; // Current scroll position
+      const docHeight = document.body.scrollHeight - window.innerHeight; // Total scrollable height
+      const scrollPercent = scrollTop / docHeight; // Percentage of scroll
+      const viewportHeight = window.innerHeight;
+
+      // Move the icon based on scroll percentage
+      const iconPosition = scrollPercent * viewportHeight;
+      const speedMultiplier = 0.1;//reduce speed
+
+      // Apply the transformation
+      scrollIcon.style.transform = `translateY(${iconPosition}px)`;
+    });
+   </script>
+  </body>
+  </html>
